@@ -1,0 +1,217 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya Kontainer Utama */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #63717e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #161515;
+    position: relative; /* Untuk posisi logo yang absolut */
+}
+
+/* Gaya logo di kiri */
+header .logo-left {
+    position: absolute;
+    left: 0px; /* Jarak dari kiri */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+    
+}
+
+header .logo-left img {
+    max-width: 200px; /* Ukuran logo kiri */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Gaya logo di kanan */
+header .logo-right {
+    position: absolute;
+    right: 20px; /* Jarak dari kanan */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+}
+
+header .logo-right img {
+    max-width: 200px; /* Ukuran logo kanan */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Menu Navigasi */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #7a1616;
+    font-weight: bold;
+}
+
+/* Gaya umum untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #a3a1a1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(51, 47, 47);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian Notaris */
+.notaris-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.notaris-content h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.notaris-content article {
+    margin-bottom: 30px;
+}
+
+.notaris-content article h2 {
+    color: #333;
+    font-size: 1.5rem;
+    border-left: 5px solid #004080;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.notaris-content p {
+    margin: 10px 0;
+    line-height: 1.8;
+    color: #333;
+}
+
+.notaris-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #555;
+}
+
+
+.notaris-content article ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px; /* Memberi indentasi untuk daftar */
+}
+
+.notaris-content article ul li {
+    margin-bottom: 10px;
+    list-style: disc; /* Bullet untuk daftar */
+    
+}
+
+ul, li {
+    font-family: Arial, sans-serif; /* Sesuaikan dengan font yang digunakan pada elemen lain */
+    font-size: 16px; /* Sesuaikan dengan ukuran font yang digunakan pada elemen lain */
+    line-height: 1.6; /* Sesuaikan dengan jarak antar baris yang diinginkan */
+    color: #333; /* Sesuaikan dengan warna teks yang digunakan pada elemen lain */
+}
+
+.bold-link {
+    font-weight: bold;  /* Menebalkan teks */
+}
+
+.bold-link:visited {
+    color: inherit;  /* Warna tetap sama setelah diklik */
+}
+
+.bold-link:hover {
+    color: inherit;  /* Warna tetap sama saat hover */
+}
+
+.bold-link:focus {
+    color: inherit;  /* Warna tetap sama saat fokus */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .notaris-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .notaris-content article h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+   
+}

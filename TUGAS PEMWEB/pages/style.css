@@ -1,0 +1,152 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya Kontainer Utama */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #63717e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Untuk posisi logo yang absolut */
+}
+
+/* Gaya logo di kiri */
+header .logo-left {
+    position: absolute;
+    left: 0px; /* Jarak dari kiri */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+    
+}
+
+header .logo-left img {
+    max-width: 200px; /* Ukuran logo kiri */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Gaya logo di kanan */
+header .logo-right {
+    position: absolute;
+    right: 20px; /* Jarak dari kanan */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+}
+
+header .logo-right img {
+    max-width: 200px; /* Ukuran logo kanan */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Menu Navigasi */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(51, 47, 47);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* CSS untuk Bagian Tentang Kami */
+#tentang-kami {
+    background-color: #f9f9f9;  /* Warna latar belakang yang lembut */
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+#tentang-kami .about-container {
+    max-width: 1200px;
+    margin: 0 auto;  /* Menjaga konten tetap terpusat */
+    padding: 20px;
+    background-color: #efefef;  /* Latar belakang putih untuk konten */
+    border-radius: 8px;  /* Membuat sudut sedikit melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Memberikan bayangan halus pada kotak konten */
+}
+
+#tentang-kami h2 {
+    font-size: 2em;  /* Ukuran font lebih besar untuk judul */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;  /* Warna teks gelap */
+    font-weight: bold;  /* Menebalkan teks */
+    margin-bottom: 20px;  /* Jarak bawah antara judul dan konten */
+}
+
+#tentang-kami p {
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;  /* Warna teks sedikit lebih terang untuk paragraf */
+    line-height: 1.8;  /* Menjaga kenyamanan baca dengan jarak antar baris */
+    margin-bottom: 15px;  /* Jarak bawah antara paragraf */
+}
+
+#tentang-kami ul {
+    list-style-type: disc;  /* Menggunakan bulatan untuk daftar */
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+#tentang-kami ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;  /* Jarak antar item dalam daftar */
+}
+
+#tentang-kami strong {
+    font-weight: bold;  /* Menebalkan teks untuk bagian penting */
+}
+
+.bold-link {
+    font-weight: bold;  /* Menebalkan teks */
+}
+
+.bold-link:visited {
+    color: inherit;  /* Warna tetap sama setelah diklik */
+}
+
+.bold-link:hover {
+    color: inherit;  /* Warna tetap sama saat hover */
+}
+
+.bold-link:focus {
+    color: inherit;  /* Warna tetap sama saat fokus */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+   
+}

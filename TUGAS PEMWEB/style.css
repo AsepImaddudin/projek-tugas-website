@@ -1,0 +1,280 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya Kontainer Utama */
+.container {
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Header */
+header {
+    background-color: #63717e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Untuk posisi logo yang absolut */
+}
+
+/* Gaya logo di kiri */
+header .logo-left {
+    position: absolute;
+    left: 0px; /* Jarak dari kiri */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+    
+}
+
+header .logo-left img {
+    max-width: 200px; /* Ukuran logo kiri */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Gaya logo di kanan */
+header .logo-right {
+    position: absolute;
+    right: 20px; /* Jarak dari kanan */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+}
+
+header .logo-right img {
+    max-width: 200px; /* Ukuran logo kanan */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Menu Navigasi */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    
+}
+
+/* Gaya untuk Teks Selamat Datang */
+.welcome-text {
+    background-color: transparent; /* Menghilangkan background */
+    padding: 20px; /* Memberikan ruang di sekitar tulisan */
+    text-align: center; /* Memastikan teks tetap di tengah */
+}
+
+
+.welcome-text {
+    background-color: #e0e0e0; /* Menyamakan background dengan warna main */
+    padding: 20px;
+    text-align: center;
+    
+}
+
+
+.welcome-text p {
+    font-size: 1.1em; /* Ukuran font untuk paragraf */
+  
+    color: #3e3e3e; /* Warna teks lebih terang untuk paragraf */
+    max-width: 800px; /* Membatasi lebar paragraf */
+    margin: 0 auto; /* Agar teks tetap berada di tengah */
+    line-height: 1.6; /* Jarak antar baris teks untuk kenyamanan baca */
+    
+}
+
+
+/* Konten Utama */
+main {
+    background-color: #e0e0e0; /* Warna abu-abu lembut untuk seluruh halaman */
+    padding: 20px;
+    flex-grow: 1;
+    margin-top: 0; /* Memberikan jarak antara header dan konten */
+    flex: 1; /* Membuat konten utama fleksibel agar bisa menyesuaikan dengan tinggi halaman */
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+/* Gaya konten dalam item */
+.content-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+}
+
+.content-item:hover {
+    transform: translateY(-5px);
+}
+
+.content-item img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.content-item h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.content-item a {
+    text-decoration: none;  /* Menghilangkan garis bawah */
+    color: inherit;         /* Menggunakan warna teks default */
+    display: block;         /* Membuat link mencakup seluruh area div */
+    text-align: center;     /* Memusatkan teks */
+}
+
+.content-item a:hover {
+    opacity: 0.8;  /* Memberikan efek transparansi saat hover */
+}
+
+.content-item img {
+    width: 100px;  /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: auto;
+}
+
+/* Gaya untuk logo kiri dan kanan di bawah */
+.logo-bottom {
+    position: relative;
+    width: 30%;
+    height: 230px; /* Atur tinggi yang diinginkan */
+    display: flex;
+    justify-content: space-between; /* Memposisikan logo kiri dan kanan */
+    
+    margin-top: 20px; /* Menambahkan jarak antara logo dan konten sebelumnya */
+}
+
+.logo-left-bottom, .logo-right-bottom {
+    position: absolute;
+    bottom: 0; /* Memastikan logo berada di bagian bawah */
+}
+
+.logo-left-bottom {
+    left: 0; /* Menempatkan logo kiri ke pojok kiri */
+}
+
+.logo-right-bottom {
+    right: 0; /* Menempatkan logo kanan ke pojok kanan */
+}
+
+.logo-left-bottom img, .logo-right-bottom img {
+    max-width: 30%; /* Menjaga logo agar tidak melampaui lebar kontainer */
+    height: 30%; /* Menjaga proporsi logo */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.8em;
+   
+}
+
+
+/* Media query untuk tampilan dengan lebar layar maksimum 476px */
+@media screen and (max-width: 476px) {
+    /* Menyesuaikan tampilan header */
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Menyesuaikan ukuran gambar di dalam header */
+    .logo-left img, .logo-right img {
+        max-width: 80%; /* Membatasi ukuran gambar agar lebih kecil pada perangkat kecil */
+    }
+
+    /* Menyesuaikan navigasi */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Mengatur ukuran teks pada konten */
+    .content-item h2 {
+        font-size: 18px;  /* Ukuran font lebih kecil di perangkat mobile */
+    }
+
+    /* Mengatur layout konten utama */
+    .content {
+        display: block;
+    }
+
+    .content-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Mengatur ukuran teks di footer */
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Menyesuaikan padding untuk bagian tentang kami */
+    #tentang-kami {
+        padding: 20px;
+    }
+
+    .about-container h2 {
+        font-size: 20px;
+    }
+
+    /* Mengurangi margin pada elemen umum */
+    .container {
+        padding: 10px;
+    }
+    /* Pengaturan untuk logo bawah */
+    .logo-bottom {
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Mengatur ukuran gambar logo bawah */
+    .logo-bottom img {
+        max-width: 50px; /* Menyesuaikan ukuran logo agar tidak terlalu besar */
+        height: auto;
+    }
+}
+
+    

@@ -1,0 +1,239 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya Kontainer Utama */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #63717e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* Untuk posisi logo yang absolut */
+}
+
+/* Gaya logo di kiri */
+header .logo-left {
+    position: absolute;
+    left: 0px; /* Jarak dari kiri */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+    
+}
+
+header .logo-left img {
+    max-width: 200px; /* Ukuran logo kiri */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Gaya logo di kanan */
+header .logo-right {
+    position: absolute;
+    right: 20px; /* Jarak dari kanan */
+    top: 50%; /* Memposisikan logo di tengah vertikal */
+    transform: translateY(-50%); /* Mengoreksi posisi vertikal logo */
+}
+
+header .logo-right img {
+    max-width: 200px; /* Ukuran logo kanan */
+    height: auto;    /* Menjaga proporsi gambar */
+}
+
+/* Menu Navigasi */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(51, 47, 47);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling untuk bagian Profil */
+#profil {
+  padding: 20px;
+  background-color: #c9cbcd;
+  display: flex;
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  align-items: center; /* Memusatkan konten secara vertikal */
+  min-height: 100vh; /* Membuat profil mengambil minimal tinggi layar */
+}
+
+.profil-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center; /* Memusatkan teks dalam kontainer */
+}
+
+.profil-container h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profil-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Gaya untuk gambar profil */
+.profil-img {
+  border-radius: 50%;
+  width: 180px;  /* Memperbesar lebar gambar */
+  height: 180px; /* Memperbesar tinggi gambar */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Memusatkan gambar di dalam elemen */
+}
+
+.profil-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styling untuk informasi profil dan tabel */
+.profil-info {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan tabel */
+}
+
+.profil-info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.profil-info table th,
+.profil-info table td {
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Membuat header tabel lebih menonjol */
+.profil-info table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Styling untuk sel tabel */
+.profil-info table td {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+/* Memberikan efek hover pada baris tabel */
+.profil-info table tr:hover td {
+  background-color: #f1f1f1;
+}
+
+/* Styling untuk baris terakhir */
+.profil-info table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Styling untuk baris pertama pada tabel */
+.profil-info table tr:first-child th {
+  border-top: none;
+}
+
+/* Menambahkan efek border pada tabel secara keseluruhan */
+.profil-info table {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Menambahkan font untuk teks di dalam tabel */
+.profil-info table th,
+.profil-info table td {
+    font-family: 'Arial', sans-serif; /* Ganti dengan font pilihan Anda */
+    font-size: 16px; /* Ukuran font tabel */
+}
+
+/* Mengubah font di header tabel */
+.profil-info table th {
+    font-family: 'Roboto', sans-serif; /* Menggunakan font lain untuk header tabel */
+    font-weight: bold;
+}
+
+/* Mengubah font untuk konten tabel */
+.profil-info table td {
+    font-family: 'Open Sans', sans-serif; /* Menggunakan font lain untuk konten tabel */
+}
+
+
+
+/* Styling untuk tabel di perangkat kecil */
+@media (max-width: 768px) {
+  .profil-info table {
+      font-size: 14px; /* Ukuran font lebih kecil di perangkat mobile */
+  }
+
+  .profil-info table th,
+  .profil-info table td {
+      padding: 10px;
+  }
+}
+
+
+/* Styling untuk tabel di perangkat kecil */
+@media (max-width: 768px) {
+  .profil-info table {
+      font-size: 14px; /* Ukuran font lebih kecil di perangkat mobile */
+  }
+
+  .profil-info table th,
+  .profil-info table td {
+      padding: 10px;
+  }
+}
+
+  /* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+   
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notaris</title>
+    <link rel="stylesheet" href="style.css"> <!-- Path untuk file CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1>KANTOR NOTARIS & PPAT</h1>
+                <p>ANDREAS JOKO BINTARTO, S.H., M.Kn.</p>
+            </div>
+            <div class="logo-left">
+                <img src="logo-kiri.png" alt="Logo Kiri">
+            </div>
+            <div class="logo-right">
+                <img src="logo-kanan.png" alt="Logo Kanan">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li> <!-- Tautan kembali ke index.html -->
+    
+                </ul>
+            </nav>
+        </header>
+        <main>
+    <div class="contact-container">             <!-- Map nya-->
+        <div class="map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.7247679319788!2d106.97516814904974!3d-6.290241160072166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dcb9a44cef3%3A0xb95b09069f98a146!2sNotaris%20dan%20PPAT%20Andreas%20Joko%20Bintarto%2C%20SH.%2C%20M.Kn.!5e0!3m2!1sen!2sid!4v1733587600799!5m2!1sen!2sid" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="info-section">
+            <h2>Hubungi Kami</h2>
+            <p><strong>Kantor Notaris & PPAT</strong></p>
+            <p>ANDREAS JOKO BINTARTO,S.H.,M.Kn.</p>
+            <p>Jl. Kemang Wijaya Kusuma Raya No.19, RT.005/RW.012, Bojong Menteng, Kec. Rawalumbu, Kota Bekasi</p>
+            <p>Jawa Barat 17117</p>
+            <p>Email: notaris.andreas010@gmail.com</p>
+        </div>
+            <!-- Js Pesan setelah Submit !! -->
+        <div class="form-section">
+            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbzmeTT5B9slVzczYPd4ev6yQlhVRkhXDqkXJ8nmm5YQm_PFJ6t1qzeF5Koft_LafG-i/exec" method="POST">
+                <label for="name">Nama *</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+                <label for="message">Pesan *</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan Anda" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="success-message" style="display: none; color: rgb(49, 116, 223); margin-top: 20px;">
+                <p>Pesan Anda telah terkirim! Terima kasih atas kontak Anda.</p>
+        </div>
+    </main>
+        <script>
+            // Ambil elemen formulir dan pesan sukses
+            const form = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+
+            // Menangani pengiriman formulir
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Mencegah pengiriman formulir otomatis
+
+                // Kirim data formulir ke Google Apps Script
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Tampilkan pesan sukses dan sembunyikan formulir
+                        successMessage.style.display = 'block';
+                        form.style.display = 'none';
+
+                        // Arahkan kembali ke halaman utama setelah 8 detik
+                        setTimeout(function() {
+                            window.location.href = '../index.html'; // Ganti dengan URL yang sesuai
+                        }, 8000);
+                    } else {
+                        alert('Terjadi kesalahan. Silakan coba lagi.');
+                    }
+                })
+                .catch(error => {
+                    alert('Terjadi kesalahan. Silakan coba lagi.');
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
